@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoreXclean & Maintenance Services | Find Local Cleaning Pros</title>
+
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Import FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        /* Color Palette */
+        --primary-color: #00b4d8;
+        /* Fresh Blue */
+        --primary-dark: #00b4d8;
+        --accent-color: #90e0ef;
+        --bg-color: #f8f9fa;
+        --card-bg: #ffffff;
+        --text-main: #2b2d42;
+        --text-secondary: #6c757d;
+        --border-color: #e9ecef;
+        --success-color: #38b000;
+        --warning-color: #ffb703;
+
+        /* Spacing & Layout */
+        --container-width: 1200px;
+        --header-height: 70px;
+        --radius-md: 12px;
+        --radius-lg: 16px;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+        --transition: all 0.3s ease;
+      }
+
+      /* Reset & Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      /* Header / Navigation */
+      header {
+        background-color: var(--card-bg);
+        height: var(--header-height);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5%;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo i {
+        color: var(--primary-color);
+      }
+
+      nav ul {
+        display: flex;
+        gap: 30px;
+      }
+
+      nav a {
+        font-weight: 500;
+        color: var(--text-secondary);
+        transition: var(--transition);
+      }
+
+      nav a:hover,
+      nav a.active {
+        color: var(--primary-color);
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 10px 24px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-2px);
+      }
+
+      /* Mobile Menu Toggle */
+      .menu-toggle {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          var(--primary-dark),
+          var(--primary-color)
+        );
+        color: white;
+        padding: 60px 5%;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Main Container */
+      .container {
+        max-width: var(--container-width);
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Filters Section */
+      .filters {
+        background: var(--card-bg);
+        padding: 20px;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        position: sticky;
+        top: 90px;
+        z-index: 90;
+        border: 1px solid var(--border-color);
+      }
+
+      .search-box {
+        flex: 2;
+        min-width: 250px;
+        position: relative;
+      }
+
+      .search-box input {
+        width: 100%;
+        padding: 12px 15px 12px 45px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        font-family: inherit;
+        font-size: 1rem;
+        outline: none;
+        transition: var(--transition);
+      }
+
+      .search-box input:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.1);
+      }
+
+      .search-box i {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-secondary);
+      }
+
+      .filter-group {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      select {
+        padding: 12px 15px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        font-family: inherit;
+        color: var(--text-main);
+        background-color: white;
+        cursor: pointer;
+        outline: none;
+      }
+
+      /* Provider Grid */
+      .providers-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        margin-bottom: 60px;
+      }
+
+      /* Provider Card */
+      .card {
+        background: var(--card-bg);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition);
+        border: 1px solid var(--border-color);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .card-header {
+        position: relative;
+        height: 120px;
+        background: linear-gradient(to right, #e0f7fa, #ffffff);
+      }
+
+      .company-logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 4px solid white;
+        position: absolute;
+        bottom: -40px;
+        left: 20px;
+        object-fit: cover;
+        background-color: #eee;
+      }
+
+      .verified-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--primary-dark);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .card-body {
+        padding: 50px 20px 20px;
+        flex-grow: 1;
+      }
+
+      .provider-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      .company-name {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        margin-bottom: 15px;
+        font-weight: 500;
+      }
+
+      .rating {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .stars {
+        color: var(--warning-color);
+      }
+
+      .review-count {
+        color: var(--text-secondary);
+        font-weight: 400;
+      }
+
+      .services-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .service-tag {
+        background-color: var(--bg-color);
+        color: var(--text-secondary);
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      .price-area {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+        border-top: 1px solid var(--border-color);
+      }
+
+      .price {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+      }
+
+      .price span {
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        font-weight: 400;
+      }
+
+      .btn-view {
+        padding: 8px 16px;
+        background-color: transparent;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .btn-view:hover {
+        background-color: var(--primary-color);
+        color: white;
+      }
+
+      /* Modal / Detail View */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        backdrop-filter: blur(4px);
+      }
+
+      .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .modal-content {
+        background: white;
+        width: 90%;
+        max-width: 700px;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        position: relative;
+        transform: translateY(20px);
+        transition: var(--transition);
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+
+      .modal-overlay.active .modal-content {
+        transform: translateY(0);
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: white;
+        border: none;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+      }
+
+      .modal-header {
+        background: var(--bg-color);
+        padding: 30px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .modal-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid white;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .modal-title h2 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+      }
+
+      .modal-body {
+        padding: 30px;
+      }
+
+      .detail-row {
+        margin-bottom: 20px;
+      }
+
+      .detail-row h4 {
+        color: var(--primary-dark);
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .bio-text {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+      }
+
+      .pricing-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      .pricing-table th,
+      .pricing-table td {
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .pricing-table th {
+        color: var(--text-secondary);
+        font-weight: 500;
+      }
+
+      .modal-actions {
+        padding: 20px 30px;
+        border-top: 1px solid var(--border-color);
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #1a1a1a;
+        color: #ccc;
+        padding: 60px 0 20px;
+        margin-top: auto;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-col h3 {
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      .footer-col ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-col ul li a:hover {
+        color: var(--primary-color);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #333;
+        font-size: 0.9rem;
+      }
+
+      .footer-bottom a {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+      .anycoder-link {
+        color: var(--primary-color);
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .anycoder-link:hover {
+        color: #38bdf8;
+        text-decoration: sli;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        nav {
+          display: none;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .filters {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .filter-group {
+          flex-direction: column;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo"><i class="fa-solid fa-broom"></i> MoreXclean</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#" class="active">Find Pros</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      <div style="display: flex; gap: 15px; align-items: center">
+        <a href="#" class="btn-primary">Post a Service</a>
+        <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Find Trusted Cleaning Experts</h1>
+      <p>
+        Browse top-rated local professionals and companies for your home or
+        office.
+      </p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+      <!-- Search & Filters -->
+      <section class="filters">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by name, company, or service..."
+          />
+        </div>
+        <div class="filter-group">
+          <select id="serviceFilter">
+            <option value="all">All Services</option>
+            <option value="Residential">Residential Cleaning</option>
+            <option value="Commercial">Commercial Cleaning</option>
+            <option value="Deep Cleaning">Deep Cleaning</option>
+            <option value="Move-in/out">Move-in/out</option>
+          </select>
+          <select id="priceFilter">
+            <option value="all">Any Price</option>
+            <option value="low">£0 - £50/hr</option>
+            <option value="mid">£50 - £100/hr</option>
+            <option value="high">£100+/hr</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Provider Grid -->
+      <section class="providers-grid" id="providersGrid">
+        <!-- Cards will be injected here via JavaScript -->
+      </section>
+
+      <!-- No Results State -->
+      <div
+        id="noResults"
+        style="
+          display: none;
+          text-align: center;
+          padding: 40px;
+          color: var(--text-secondary);
+        "
+      >
+        <i
+          class="fa-regular fa-face-frown"
+          style="font-size: 3rem; margin-bottom: 15px"
+        ></i>
+        <h3>No providers found</h3>
+        <p>Try adjusting your search filters.</p>
+      </div>
+    </main>
+
+    <!-- Provider Detail Modal -->
+    <div class="modal-overlay" id="providerModal">
+      <div class="modal-content">
+        <button class="close-modal" id="closeModalBtn">&times;</button>
+        <div class="modal-header">
+          <img src="" alt="Profile" class="modal-avatar" id="modalImg" />
+          <div class="modal-title">
+            <h2 id="modalName">Provider Name</h2>
+            <p id="modalCompany" style="color: var(--text-secondary)">
+              Company Name
+            </p>
+            <div class="rating" id="modalRating">
+              <!-- Stars injected here -->
+            </div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="detail-row">
+            <h4>About</h4>
+            <p class="bio-text" id="modalBio">Bio goes here...</p>
+          </div>
+          <div class="detail-row">
+            <h4>Services Offered</h4>
+            <div class="services-list" id="modalServices">
+              <!-- Tags -->
+            </div>
+          </div>
+          <div class="detail-row">
+            <h4>Pricing</h4>
+            <table class="pricing-table">
+              <tbody id="modalPricing">
+                <!-- Pricing rows -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button
+            class="btn-view"
+            onclick="alert('Message feature coming soon!')"
+          >
+            Message
+          </button>
+          <button
+            class="btn-primary"
+            onclick="alert('Booking feature coming soon!')"
+          >
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-col">
+            <h3>MoreXclean</h3>
+            <p>
+              Connecting you with the best cleaning professionals in your area.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Find Pros</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Trust & Safety</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 MoreXclean. All rights reserved.</p>
+          <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #64748b">
+            Powered by
+            <a href="#" target="_blank">Morexx</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // --- Mock Data ---
+      const providers = [
+        {
+          id: 1,
+          name: "Sarah Jenkins",
+          company: "Sparkle Clean Co.",
+          rating: 4.9,
+          reviews: 128,
+          location: "Mancghester, UK",
+          price: 45, // per hour
+          services: ["Residential", "Deep Cleaning", "Move-in/out"],
+          bio: "Sarah has over 10 years of experience in residential cleaning. She prides herself on eco-friendly products and attention to detail.",
+          imageSeed: "sarah",
+          verified: true,
+          pricingDetails: [
+            { service: "Standard Clean", rate: "£45/hr" },
+            { service: "Deep Clean", rate: "£120/visit" },
+            { service: "Move-out", rate: "£250/flat" },
+          ],
+        },
+        {
+          id: 2,
+          name: "Mike Ross",
+          company: "Office Bright",
+          rating: 4.7,
+          reviews: 85,
+          location: "Leeds, UK",
+          price: 60,
+          services: ["Commercial", "Janitorial"],
+          bio: "Specializing in corporate office maintenance. We handle everything from daily trash removal to floor waxing.",
+          imageSeed: "mike",
+          verified: true,
+          pricingDetails: [
+            { service: "Office Hourly", rate: "£60/hr" },
+            { service: "Monthly Contract", rate: "£500/mo" },
+          ],
+        },
+        {
+          id: 3,
+          name: "Elena Gomez",
+          company: "Elena's Eco-Clean",
+          rating: 5.0,
+          reviews: 42,
+          location: "Colchester, UK",
+          price: 55,
+          services: ["Residential", "Deep Cleaning"],
+          bio: "I use only 100% natural, non-toxic cleaning agents safe for pets and children. Let me make your home shine naturally!",
+          imageSeed: "elena",
+          verified: false,
+          pricingDetails: [
+            { service: "Eco Standard", rate: "£55/hr" },
+            { service: "Eco Deep Clean", rate: "£140/visit" },
+          ],
+        },
+        {
+          id: 4,
+          name: "David Kim",
+          company: "ProSweep Services",
+          rating: 4.5,
+          reviews: 210,
+          location: "Liverpool, UK",
+          price: 80,
+          services: ["Commercial", "Windows", "Carpet"],
+          bio: "Full service commercial cleaning including high-rise window washing and industrial carpet steam cleaning.",
+          imageSeed: "david",
+          verified: true,
+          pricingDetails: [
+            { service: "Carpet Steam", rate: "£80/room" },
+            { service: "Window Cleaning", rate: "£90/hr" },
+            { service: "General Commercial", rate: "£80/hr" },
+          ],
+        },
+        {
+          id: 5,
+          name: "Linda Johnson",
+          company: "Grandma's Touch",
+          rating: 4.8,
+          reviews: 67,
+          location: "London, UK",
+          price: 35,
+          services: ["Residential", "Laundry"],
+          bio: "Like a grandma's touch, I treat every home with care. I also offer laundry and folding services.",
+          imageSeed: "linda",
+          verified: false,
+          pricingDetails: [
+            { service: "Standard Clean", rate: "£35/hr" },
+            { service: "Laundry Add-on", rate: "£20/load" },
+          ],
+        },
+        {
+          id: 6,
+          name: "Ahmed Hassan",
+          company: "QuickFix Cleaners",
+          rating: 4.6,
+          reviews: 30,
+          location: "Birmingham, UK",
+          price: 50,
+          services: ["Move-in/out", "Deep Cleaning"],
+          bio: "Fast, efficient, and thorough. Best choice for getting your deposit back when moving out.",
+          imageSeed: "ahmed",
+          verified: true,
+          pricingDetails: [
+            { service: "Move-out Special", rate: "£200/studio" },
+            { service: "Deep Clean", rate: "£110/visit" },
+          ],
+        },
+      ];
+
+      // --- DOM Elements ---
+      const grid = document.getElementById("providersGrid");
+      const searchInput = document.getElementById("searchInput");
+      const serviceFilter = document.getElementById("serviceFilter");
+      const priceFilter = document.getElementById("priceFilter");
+      const noResults = document.getElementById("noResults");
+
+      // Modal Elements
+      const modal = document.getElementById("providerModal");
+      const closeModalBtn = document.getElementById("closeModalBtn");
+      const modalImg = document.getElementById("modalImg");
+      const modalName = document.getElementById("modalName");
+      const modalCompany = document.getElementById("modalCompany");
+      const modalRating = document.getElementById("modalRating");
+      const modalBio = document.getElementById("modalBio");
+      const modalServices = document.getElementById("modalServices");
+      const modalPricing = document.getElementById("modalPricing");
+
+      // --- Functions ---
+
+      // Generate Star Rating HTML
+      function getStarsHTML(rating) {
+        let stars = "";
+        for (let i = 1; i <= 5; i++) {
+          if (i <= Math.floor(rating)) {
+            stars += '<i class="fa-solid fa-star"></i>';
+          } else if (i === Math.ceil(rating) && !Number.isInteger(rating)) {
+            stars += '<i class="fa-solid fa-star-half-stroke"></i>';
+          } else {
+            stars += '<i class="fa-regular fa-star"></i>';
+          }
+        }
+        return stars;
+      }
+
+      // Render Cards
+      function renderProviders(data) {
+        grid.innerHTML = "";
+
+        if (data.length === 0) {
+          noResults.style.display = "block";
+          return;
+        } else {
+          noResults.style.display = "none";
+        }
+
+        data.forEach((provider) => {
+          const card = document.createElement("article");
+          card.className = "card";
+
+          // Construct Service Tags
+          const tagsHTML = provider.services
+            .slice(0, 3)
+            .map((s) => `<span class="service-tag">${s}</span>`)
+            .join("");
+
+          // Verified Badge
+          const badgeHTML = provider.verified
+            ? `<div class="verified-badge"><i class="fa-solid fa-check-circle"></i> Verified</div>`
+            : "";
+
+          card.innerHTML = `
+                    <div class="card-header">
+                        <img src="https://picsum.photos/seed/${
+                          provider.imageSeed
+                        }/200/200" alt="${provider.name}" class="company-logo">
+                        ${badgeHTML}
+                    </div>
+                    <div class="card-body">
+                        <h3 class="provider-name">${provider.name}</h3>
+                        <p class="company-name">${provider.company}</p>
+
+                        <div class="rating">
+                            <span class="stars">${getStarsHTML(
+                              provider.rating
+                            )}</span>
+                            <span>${provider.rating} (${
+            provider.reviews
+          })</span>
+                        </div>
+
+                        <div class="services-list">
+                            ${tagsHTML}
+                        </div>
+
+                        <div class="price-area">
+                            <div class="price">£${
+                              provider.price
+                            }<span>/hr</span></div>
+                            <button class="btn-view" onclick="openModal(${
+                              provider.id
+                            })">View Profile</button>
+                        </div>
+                    </div>
+                `;
+          grid.appendChild(card);
+        });
+      }
+
+      // Filter Logic
+      function filterProviders() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const selectedService = serviceFilter.value;
+        const selectedPrice = priceFilter.value;
+
+        const filtered = providers.filter((provider) => {
+          // Search Match (Name or Company)
+          const matchesSearch =
+            provider.name.toLowerCase().includes(searchTerm) ||
+            provider.company.toLowerCase().includes(searchTerm) ||
+            provider.services.some((s) => s.toLowerCase().includes(searchTerm));
+
+          // Service Match
+          const matchesService =
+            selectedService === "all" ||
+            provider.services.includes(selectedService);
+
+          // Price Match
+          let matchesPrice = true;
+          if (selectedPrice === "low") matchesPrice = provider.price < 50;
+          if (selectedPrice === "mid")
+            matchesPrice = provider.price >= 50 && provider.price <= 100;
+          if (selectedPrice === "high") matchesPrice = provider.price > 100;
+
+          return matchesSearch && matchesService && matchesPrice;
+        });
+
+        renderProviders(filtered);
+      }
+
+      // Modal Logic
+      window.openModal = function (id) {
+        const provider = providers.find((p) => p.id === id);
+        if (!provider) return;
+
+        modalImg.src = `https://picsum.photos/seed/${provider.imageSeed}/200/200`;
+        modalName.textContent = provider.name;
+        modalCompany.textContent = provider.company;
+        modalRating.innerHTML = `<span class="stars">${getStarsHTML(
+          provider.rating
+        )}</span> <span>${provider.rating} (${
+          provider.reviews
+        } reviews)</span> <span style="margin-left:10px; color:#666; font-weight:400;">${
+          provider.location
+        }</span>`;
+        modalBio.textContent = provider.bio;
+
+        // Render Services in Modal
+        modalServices.innerHTML = provider.services
+          .map(
+            (s) =>
+              `<span class="service-tag" style="background:var(--primary-color); color:white;">${s}</span>`
+          )
+          .join("");
+
+        // Render Pricing Table
+        modalPricing.innerHTML = provider.pricingDetails
+          .map(
+            (item) => `
+                <tr>
+                    <td>${item.service}</td>
+                    <td style="text-align:right; font-weight:600;">${item.rate}</td>
+                </tr>
+            `
+          )
+          .join("");
+
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden"; // Prevent background scrolling
+      };
+
+      function closeModal() {
+        modal.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      // --- Event Listeners ---
+      searchInput.addEventListener("input", filterProviders);
+      serviceFilter.addEventListener("change", filterProviders);
+      priceFilter.addEventListener("change", filterProviders);
+
+      closeModalBtn.addEventListener("click", closeModal);
+
+      // Close modal when clicking outside content
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      // Initialize
+      renderProviders(providers);
+    </script>
+  </body>
+</html>
